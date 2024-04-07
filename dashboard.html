@@ -1,0 +1,473 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="Images/logo.png">
+
+        <!--? ========== Bootstrap CDN Link ========== -->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+
+        <!--? ========== Remix Icon CDN Link ========== -->
+        <link href="https://cdn.jsdelivr.net/npm/remixicon@4.2.0/fonts/remixicon.css" rel="stylesheet"/>
+
+        <!--? ========== CSS File Link ========== -->
+        <link rel="stylesheet" href="style.css">
+    <title>Dashboard - TradeNexus</title>
+</head>
+<body>
+
+    <!--? ========== Navbar Section ========== -->
+
+    <nav class="navbar">
+        <a href="index.html" class="brending">TradeNexus</a>
+        <ul class="nav_menu">
+            <li class="li nav_item"><a href="index.html" class="nav_link">Home</a></li>
+            <li class="li nav_item"><a href="dashboard.html" class="nav_link">Dashboard</a></li>
+            <li class="li nav_item"><a href="signup.html" class="nav_link">Sign Up</a></li>
+        </ul>
+        <div class="hamburger">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </div>
+    </nav>
+
+    <!--? ========== Dashboard Section ========== -->
+
+    <section class="dashboardSection">
+        <div class="leftDashboard">
+            <div class="dashboardNav">
+                <li class="dashboardLinks">
+                    <a class="dashboardItem" href="#" onclick="toggleMenu('dashboardMenu')"><i class="ri-dashboard-fill"></i>Dashboard</a>
+                </li>
+                <li class="dashboardLinks">
+                    <a class="dashboardItem" href="#" onclick="toggleMenu('dashBoardTeam')"><i class="ri-team-fill"></i>Team</a>
+                </li>
+                <li class="dashboardLinks">
+                    <a class="dashboardItem" href="#" onclick="toggleMenu('dashBoardWork')"><i class="ri-briefcase-fill"></i>Work</a>
+                </li>
+                <li class="dashboardLinks">
+                    <a class="dashboardItem" href="#" onclick="toggleMenu('dashBoardProfile')"><i class="ri-user-fill"></i>Profile</a>
+                </li>
+            </div>
+        </div>
+        <div class="rightDashboard">
+
+            <div class="dashboardMenu menuSection" id="dashboardMenu">
+                <h2>Market Overview</h2>
+                <div class="chart">
+                    <div class="tradingview-widget-container">
+                        <div class="whiteCircle"></div>
+                        <div class="tradingview-widget-container__widget"></div>
+                        <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-single-quote.js" async>
+                        {
+                            "symbol": "COINBASE:BTCUSD",
+                            "width": 440,
+                            "height": 100,
+                            "isTransparent": false,
+                            "colorTheme": "light",
+                            "locale": "en"
+                        }
+                        </script>
+                    </div>
+                    <div class="tradingview-widget-container">
+                        <div class="whiteCircle"></div>
+                        <div class="tradingview-widget-container__widget"></div>
+                        <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-single-quote.js" async>
+                        {
+                            "symbol": "COINBASE:ETHUSD",
+                            "width": 440,
+                            "isTransparent": false,
+                            "colorTheme": "light",
+                            "locale": "en"
+                        }
+                        </script>
+                    </div>
+                    <div class="tradingview-widget-container">
+                        <div class="whiteCircle"></div>
+                        <div class="tradingview-widget-container__widget"></div>
+                        <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-single-quote.js" async>
+                        {
+                            "symbol": "COINBASE:USDTUSD",
+                            "width": 440,
+                            "isTransparent": false,
+                            "colorTheme": "light",
+                            "locale": "en"
+                        }
+                        </script>
+                    </div>
+                    <div class="tradingview-widget-container">
+                        <div class="whiteCircle"></div>
+                        <div class="tradingview-widget-container__widget"></div>
+                        <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-single-quote.js" async>
+                        {
+                            "symbol": "COINBASE:SOLUSD",
+                            "width": 440,
+                            "isTransparent": false,
+                            "colorTheme": "light",
+                            "locale": "en"
+                        }
+                        </script>
+                    </div>                    
+                    <div class="tradingview-widget-container">
+                        <div class="whiteCircle"></div>
+                        <div class="tradingview-widget-container__widget"></div>
+                        <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-single-quote.js" async>
+                        {
+                            "symbol": "COINBASE:XRPUSD",
+                            "width": 440,
+                            "isTransparent": false,
+                            "colorTheme": "light",
+                            "locale": "en"
+                        }
+                        </script>
+                    </div>
+                    <div class="tradingview-widget-container">
+                        <div class="whiteCircle"></div>
+                        <div class="tradingview-widget-container__widget"></div>
+                        <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-single-quote.js" async>
+                        {
+                            "symbol": "COINBASE:AVAXUSD",
+                            "width": 440,
+                            "isTransparent": false,
+                            "colorTheme": "light",
+                            "locale": "en"
+                        }
+                        </script>
+                    </div>
+                </div>
+                <div class="menuUserBlance">
+                    <h6>Username: <b>Chudhary</b></h6>
+                    <h6>Balance: RS <b>1200.00</b></h6>
+                </div>
+            </div>
+
+            <div class="dashBoardTeam menuSection" id="dashBoardTeam">
+                <div class="refferenceSystemHeadings">
+                    <h2 class="m-0">Team/Refference</h2>
+                    <button>Total Team Balance: <span id="totalTeamValue">0</span> </button>
+                </div>
+                <div class="refferenceSystem">
+                    <div class="refferenceLevels">
+                        <table>
+                            <tr>
+                                <th><b>Level One</b></th>
+                                <th><b>Level Two</b></th>
+                                <th><b>Level Three</b></th>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div class="refferenceTableData">
+                                        <h5 class="tableUserName m-0">Ali</h5>
+                                        <p class="tableUserBalance teamBalanceFunction m-0">120.00</p>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="refferenceTableData">
+                                        <h5 class="tableUserName m-0">Bilal</h5>
+                                        <p class="tableUserBalance teamBalanceFunction m-0">150.00</p>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="refferenceTableData">
+                                        <h5 class="tableUserName m-0">Imran</h5>
+                                        <p class="tableUserBalance teamBalanceFunction m-0">180.00</p>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div class="refferenceTableData">
+                                        <h5 class="tableUserName m-0">Ali</h5>
+                                        <p class="tableUserBalance teamBalanceFunction m-0">120.00</p>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="refferenceTableData">
+                                        <h5 class="tableUserName m-0">Bilal</h5>
+                                        <p class="tableUserBalance teamBalanceFunction m-0">150.00</p>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="refferenceTableData">
+                                        <h5 class="tableUserName m-0">Imran</h5>
+                                        <p class="tableUserBalance teamBalanceFunction m-0">180.00</p>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div class="refferenceTableData">
+                                        <h5 class="tableUserName m-0">Ali</h5>
+                                        <p class="tableUserBalance teamBalanceFunction m-0">120.00</p>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="refferenceTableData">
+                                        <h5 class="tableUserName m-0">Bilal</h5>
+                                        <p class="tableUserBalance teamBalanceFunction m-0">150.00</p>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="refferenceTableData">
+                                        <h5 class="tableUserName m-0">Imran</h5>
+                                        <p class="tableUserBalance teamBalanceFunction m-0">180.00</p>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div class="refferenceTableData">
+                                        <h5 class="tableUserName m-0">Ali</h5>
+                                        <p class="tableUserBalance teamBalanceFunction m-0">120.00</p>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="refferenceTableData">
+                                        <h5 class="tableUserName m-0">Bilal</h5>
+                                        <p class="tableUserBalance teamBalanceFunction m-0">150.00</p>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="refferenceTableData">
+                                        <h5 class="tableUserName m-0">Imran</h5>
+                                        <p class="tableUserBalance teamBalanceFunction m-0">180.00</p>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div class="refferenceTableData">
+                                        <h5 class="tableUserName m-0">Ali</h5>
+                                        <p class="tableUserBalance teamBalanceFunction m-0">120.00</p>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="refferenceTableData">
+                                        <h5 class="tableUserName m-0">Bilal</h5>
+                                        <p class="tableUserBalance teamBalanceFunction m-0">150.00</p>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="refferenceTableData">
+                                        <h5 class="tableUserName m-0">Imran</h5>
+                                        <p class="tableUserBalance teamBalanceFunction m-0">180.00</p>
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+            </div>
+
+            <div class="dashBoardWork menuSection" id="dashBoardWork">
+                <div class="dashBoardWorkSection">
+                    <h2>Work</h2>
+                    <div class="dashBoardWorkTable">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>Cryptocurrency</th>
+                                    <th>Profit Margin</th>
+                                    <th>Trade</th>
+                                </tr>
+                            </thead>
+                            <tbody id="cryptoTableBody">
+                                <!--? ========== Table content will be added dynamically using JavaScript ========== -->
+                            </tbody>
+                        </table>
+                    </div>
+                    <!--? ========== Uper POPUP Table content ========== -->
+                    <div id="myModal" class="modal">
+                        <div class="modal-content">
+                            <div class="closePOPUP">
+                                <h4 class="m-0">Estimated Profit Table</h4>
+                                <span class="close">&times;</span>
+                            </div>
+                            <div class="topPopupData">
+                                <div class="startingTime">
+                                    <p>Starting Time:</p>
+                                    <span>08:00 AM</span>
+                                </div>
+                                <div class="popupContentTable">
+                                    <table>
+                                        <tr>
+                                            <td>Currency</td>
+                                            <td>Profit Margin</td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <span id="popupContent"></span>
+                                            </td>
+                                            <td>
+                                                <span id="popupContents"></span>
+                                            </td>
+                                        </tr>
+                                    </table>
+                                </div>
+                                <div class="ClosingTime">
+                                    <p>Closing Time:</p>
+                                    <span>05:00 PM</span>
+                                </div>
+                            </div>
+                            <div class="middlePopupData">
+                                <p class="processingFee">Processing Fee 0.10%</p>
+                                <table>
+                                    <tr>
+                                        <td>Transaction Amount</td>
+                                        <td>Estimated Profit</td>
+                                    </tr>
+                                    <tr>
+                                        <td><input type="text" placeholder="Enter Amount $" id="estimatedAmount" min="0"></td>
+                                        <td><p id="estimatedProfit">00.00</p></td>
+                                    </tr>
+                                </table>
+                            </div>
+                            <div class="bottomPopupData">
+                                <h5 class="totalBalance mb-2">Total Balance: 541 $</h5>
+                                <a href="#" id="popupSubmitButton">Submit</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="dashBoardProfile menuSection" id="dashBoardProfile">
+                <div class="dashBoardProfileSection">
+                    <h2>Profile</h2>
+                    <div class="profileUserBlance">
+                        <h6>User Balance: <b>1100.00</b></h6>
+                        <h6>Trade Balance: <b>1200.00</b></h6>
+                    </div>
+                    <div class="dashboardInnerSection">
+                        <div class="dashBoardProfileButtons">
+                            <a href="#" onclick="depositMenu('innerDepositBtn')">Deposit</a>
+                            <a href="#" onclick="depositMenu('innerDepositHistoryBtn')">Deposit History</a>
+                            <a href="#" onclick="depositMenu('innerWithdrawBtn')">Withdraw</a>
+                            <a href="#" onclick="depositMenu('innerWithdrawHistoryBtn')">Withdraw History</a>
+                            <a href="#" onclick="depositMenu('innerChangePassBtn')">Change Password</a>
+                            <a href="#" onclick="depositMenu('innerTelegtamBtn')">Telegram Link</a>
+                        </div>
+                        <div class="dashboardProfileButtonInnerData userInfo">
+                            <div class="innerDepositBtn userInfo innerPOPUP" id="innerDepositBtn">
+                                <div class="binanceID">
+                                    <span>Binance ID</span>
+                                    <div class="binanceIDCopy d-flex align-items-center">
+                                        <p id="copyText">12345678901234567890</p>
+                                        <i class="ri-file-copy-line" id="copyButton"></i>
+                                    </div>
+                                </div>
+                                <div class="binanceUsername">
+                                    <span>Username</span>
+                                    <input type="text" placeholder="Enter your name...">
+                                </div>
+                                <div class="binancePayment">
+                                    <h6>How much do you want to Deposit?</h6>
+                                    <div class="binancePaymentButtons">
+                                        <button id="paymentBtn">5$</button>
+                                        <button id="paymentBtn">10$</button>
+                                        <button id="paymentBtn">15$</button>
+                                        <button id="paymentBtn">20$</button>
+                                        <input type="text" id="paymentInput" placeholder="Enter Amount Yourself...">
+                                        <h5 id="paymentValueBtn"></h5>
+                                    </div>
+                                </div>
+                                <div class="paymentPicture pt-2">
+                                    <h6>Payment Screenshot</h6>
+                                    <input type="file">
+                                </div>
+                                <div class="paymentSubmit">
+                                    <button type="submit">Submit</button>
+                                </div>
+                            </div>
+                            <div class="innerDepositHistoryBtn despositAndWithdraw userInfo innerPOPUP" id="innerDepositHistoryBtn">
+                                <h5 class="innerDepositHistoryHeading">Deposit History</h5>
+                                <table border="1">
+                                    <tr>
+                                        <th>Date</th>
+                                        <th>Time</th>
+                                        <th>Amount</th>
+                                    </tr>
+                                    <tr>
+                                        <td>25/03/2024</td>
+                                        <td>08:41 AM</td>
+                                        <td>120.00$</td>
+                                    </tr>
+                                </table>
+                            </div>
+                            <div class="innerWithdrawBtn userInfo innerPOPUP" id="innerWithdrawBtn">
+                                <div class="withdrawAddress">
+                                    <h6>USDT Withdraw Address</h6>
+                                    <input type="text" placeholder="Enter Address here">
+                                </div>
+                                <div class="withdrawBalanceAvaliable d-flex gap-2 py-2">
+                                    <h6 class="m-0">Available Balance to withdraw:</h6>
+                                    <p class="m-0"><b>120 USDT</b></p>
+                                </div>
+                                <div class="withdrawAmount">
+                                    <h6>Withdraw Amount</h6>
+                                    <div class="withdrawAmountInput d-flex align-items-center gap-1">
+                                        <input type="text" placeholder="USD">
+                                        <h6>Max</h6>
+                                    </div>
+                                    <p>Minimum Withdraw: 5 USDT</p>
+                                </div>
+                                <div class="withdrawPaymentFee">
+                                    <h6 class="m-0">Fee:</h6>
+                                    <p class="m-0">10% USDT</p>
+                                </div>
+                                <div class="withdrawPaymentRecieve">
+                                    <h6 class="m-0">You will recieved:</h6>
+                                    <p class="m-0">15 USDT</p>
+                                </div>
+                                <button>Withdraw</button>
+                            </div>
+                            <div class="innerWithdrawHistoryBtn despositAndWithdraw userInfo innerPOPUP" id="innerWithdrawHistoryBtn">
+                                <h5 class="innerDepositHistoryHeading">Withdraw History</h5>
+                                <table border="1">
+                                    <tr>
+                                        <th>Date</th>
+                                        <th>Time</th>
+                                        <th>Amount</th>
+                                    </tr>
+                                    <tr>
+                                        <td>25/03/2024</td>
+                                        <td>08:41 AM</td>
+                                        <td>120.00$</td>
+                                    </tr>
+                                </table>
+                            </div>
+                            <div class="innerChangePassBtn userInfo innerPOPUP" id="innerChangePassBtn">
+                                <form id="changePasswordForm">
+                                    <input type="password" id="currentPassword" name="currentPassword" 
+                                    placeholder="Current Password">
+                                
+                                    <input type="password" id="newPassword" name="newPassword" 
+                                    placeholder="New Password">
+                                
+                                    <input type="password" id="confirmPassword" name="confirmPassword" 
+                                    placeholder="Confirm Password"> <br> <br>
+                                
+                                    <button type="submit">Change Password</button>
+                                </form>
+                            </div>
+                            <div class="innerTelegtamBtn userInfo innerPOPUP" id="innerTelegtamBtn">
+                                <h5>Here is Our Telegram Link for your Support</h5>
+                                <a href="https://t.me/+6PZOlvEARKEyODc0" target="_blank">Telegram Link</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!--* ====== Javascript Links ====== -->
+    <!--? ========== Fontawesome Icon CDN Link ========== -->
+    <script src="https://kit.fontawesome.com/c70d2fb412.js" crossorigin="anonymous"></script>
+
+    <!--? ========== JavaScript file Link ========== -->
+    <script src="script.js"></script>
+</body>
+</html>
