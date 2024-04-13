@@ -24,6 +24,7 @@
         <ul class="nav_menu">
             <li class="li nav_item"><a href="index.html" class="nav_link">Home</a></li>
             <li class="li nav_item"><a href="dashboard.html" class="nav_link">Dashboard</a></li>
+            <li class="li nav_item"><a href="product.html" class="nav_link">Product</a></li>
             <li class="li nav_item"><a href="signup.html" class="nav_link">Sign Up</a></li>
         </ul>
         <div class="hamburger">
@@ -49,6 +50,9 @@
                 </li>
                 <li class="dashboardLinks">
                     <a class="dashboardItem" href="#" onclick="toggleMenu('dashBoardProfile')"><i class="ri-user-fill"></i>Profile</a>
+                </li>
+                <li class="dashboardLinks">
+                    <a class="dashboardItem" href="#" onclick="toggleMenu('dashBoardReward')"><i class="ri-gift-fill"></i>Reward</a>
                 </li>
             </div>
         </div>
@@ -348,6 +352,7 @@
                             <a href="#" onclick="depositMenu('innerWithdrawHistoryBtn')">Withdraw History</a>
                             <a href="#" onclick="depositMenu('innerChangePassBtn')">Change Password</a>
                             <a href="#" onclick="depositMenu('innerTelegtamBtn')">Telegram Link</a>
+                            <a href="#" onclick="depositMenu('innerTradeHistoryBtn')">Trade History</a>
                         </div>
                         <div class="dashboardProfileButtonInnerData userInfo">
                             <div class="innerDepositBtn userInfo innerPOPUP" id="innerDepositBtn">
@@ -375,7 +380,7 @@
                                 </div>
                                 <div class="paymentPicture pt-2">
                                     <h6>Payment Screenshot</h6>
-                                    <input type="file">
+                                    <input type="file" id="imgScreenshotInput">
                                 </div>
                                 <div class="paymentSubmit">
                                     <button type="submit">Submit</button>
@@ -388,11 +393,13 @@
                                         <th>Date</th>
                                         <th>Time</th>
                                         <th>Amount</th>
+                                        <th>Approvel</th>
                                     </tr>
                                     <tr>
                                         <td>25/03/2024</td>
                                         <td>08:41 AM</td>
                                         <td>120.00$</td>
+                                        <td>Approved</td>
                                     </tr>
                                 </table>
                             </div>
@@ -430,11 +437,13 @@
                                         <th>Date</th>
                                         <th>Time</th>
                                         <th>Amount</th>
+                                        <th>Approvel</th>
                                     </tr>
                                     <tr>
                                         <td>25/03/2024</td>
                                         <td>08:41 AM</td>
                                         <td>120.00$</td>
+                                        <td>Approved</td>
                                     </tr>
                                 </table>
                             </div>
@@ -456,10 +465,28 @@
                                 <h5>Here is Our Telegram Link for your Support</h5>
                                 <a href="https://t.me/tradenexus21" target="_blank">Telegram Link</a>
                             </div>
+                            <div class="innerTradeHistoryBtn despositAndWithdraw userInfo innerPOPUP" id="innerTradeHistoryBtn">
+                                <h5 class="innerDepositHistoryHeading">Trade History</h5>
+                                <table border="1">
+                                    <tr>
+                                        <th>Date</th>
+                                        <th>Time</th>
+                                        <th>Amount</th>
+                                        <th>Approvel</th>
+                                    </tr>
+                                    <tr>
+                                        <td>25/03/2024</td>
+                                        <td>08:41 AM</td>
+                                        <td>120.00$</td>
+                                        <td>Approved</td>
+                                    </tr>
+                                </table>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
+
         </div>
     </section>
 

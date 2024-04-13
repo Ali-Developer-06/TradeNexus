@@ -115,7 +115,7 @@ document.getElementById('totalTeamValue').textContent = total;
 
     //* <!-- ========== Whole Profit Margin script ========== -->
 
-  document.addEventListener("DOMContentLoaded", function() {
+document.addEventListener("DOMContentLoaded", function() {
     let displayAllCurrencies = false;
     let timeoutDuration = 24 * 60 * 60 * 1000;
     const cryptoData = [

@@ -768,7 +768,7 @@
 .withdrawPaymentFee{
     display: flex;
     align-items: center;
-    gap: 145px;
+    gap: 65px;
 }
 .withdrawPaymentRecieve{
     display: flex;
@@ -861,6 +861,53 @@
     color: var(--black-color);
     background-color: var(--tri-color);
     text-decoration: none;
+}
+
+/*? ====== inner Trade History Btn styling ====== */
+
+.innerTradeHistoryBtn{
+    padding: 10px;
+    display: none;
+}
+.innerTradeHistoryBtn.active{
+    display: block;
+}
+.innerTradeHistoryHeading{
+    padding: 10px;
+    border-radius: 4px;
+    width: max-content;
+    color: var(--white-color);
+    background-color: var(--primary-color);
+}
+.innerTradeHistoryBtn table{
+    width: 100%;
+    text-align: center;
+    margin-top: 10px;
+}
+.innerTradeHistoryBtn table, th, td{
+    border: 1px solid white;
+    border-collapse: collapse;
+    transition: all 0.3s ease-out;
+}
+.innerTradeHistoryBtn th{
+    padding: 10px;
+    font-weight: 500;
+    color: var(--black-color);
+    background-color: var(--tri-color);
+}
+.innerTradeHistoryBtn td{
+    padding: 10px;
+    font-weight: 500;
+    color: var(--black-color);
+    background-color: var(--tri-color);
+}
+.innerTradeHistoryBtn th:hover{
+    color: var(--black-color);
+    background-color: var(--secondary-color);
+}
+.innerTradeHistoryBtn td:hover{
+    color: var(--black-color);
+    background-color: var(--secondary-color);
 }
 
 /*? ====== inner Chat Bot Btn styling ====== */
@@ -987,18 +1034,56 @@ form input[type="submit"]{
     border: none;
 }
 
+/** <!-- ====== Product Page Styling ====== --> */
+
+.RewardSection{
+    margin: 10px;
+}
+.RewardSectionInner p{
+    padding: 10px;
+    font-weight: 500;
+    border-radius: 4px;
+    background-color: var(--secondary-color);
+}
+.RewardSectionInnerData{
+    padding: 10px;
+    position: absolute;
+    top: 50%; left: 50%;
+    transform: translate(-50%, -50%);
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+.RewardSectionInnerData button{
+    width: 170px;
+    height: 40px;
+    border: none;
+    outline: none;
+    font-weight: 400;
+    font-size: 18px;
+    border-radius: 4px;
+    color: var(--white-color);
+    background-color: var(--primary-color);
+}
+.RewardSectionInnerData h6{
+    padding: 10px;
+    font-weight: 500;
+    border-radius: 4px;
+    width: max-content;
+    color: var(--black-color);
+    background-color: var(--tri-color);
+}
+.RewardSectionInnerData input{
+    width: 300px;
+    padding: 5px;
+    border: none;
+    outline: none;
+    margin-bottom: 10px;
+    border-radius: 4px;
+    border: 2px solid var(--primary-color);
+}
+
 /** <!-- ====== Website Media Qurie Start ====== --> */
 /** <!-- ====== Home Page Media Qurie Start ====== --> */
 
-@media (max-width:515px){
-    .innerDepositBtn,
-    .innerDepositHistoryBtn,
-    .innerWithdrawHistoryBtn,
-    .innerChangePassBtn,
-    .innerTelegtamBtn{
-        width:300px;
-    }
-}
 @media (max-width:768px){
     .hamburger{
         display: block;
@@ -1043,6 +1128,9 @@ form input[type="submit"]{
 
 /** <!-- ====== DashBoard Page Media Qurie Start ====== --> */
 
+    .innerPOPUP{
+        width: 100%;
+    }
     .dashboardSection{
         flex-wrap: wrap;
     }
@@ -1051,6 +1139,9 @@ form input[type="submit"]{
         height: max-content;
     }
     .rightDashboard{
+        width: 100%;
+    }
+    #imgScreenshotInput{
         width: 100%;
     }
     .menuUserBlance h6{
@@ -1102,12 +1193,18 @@ form input[type="submit"]{
         font-size: 16px;
     }
     .binancePaymentButtons input{
-        width: 60px;
+        width: 70px;
+        height: 30px;
     }
-    .innerWithdrawBtn{
-        width: 320px;
-        height: 320px;
-        margin: 0 0 0 10px;
+    .binancePaymentButtons button{
+        width: 30px;
+        height: 30px;
+        font-size: 14px;
+    }
+    #paymentValueBtn{
+        width: 30px;
+        height: 30px;
+        font-size: 14px;
     }
     .despositAndWithdraw table td{
         font-size: 14px;
@@ -1115,6 +1212,19 @@ form input[type="submit"]{
     .withdrawBalanceAvaliable h6,
     p{
         font-size: 12px;
+    }
+    .innerDepositHistoryBtn table th,
+    .innerWithdrawHistoryBtn table th,
+    .innerTradeHistoryBtn table th{
+        padding: 5px 10px;
+        font-size: 12px;
+        font-weight: bold;
+    }
+    .despositAndWithdraw table td,
+    .innerWithdrawHistoryBtn table td
+    .innerTradeHistoryBtn table td{
+        padding: 5px 10px;
+        font-size: 10px;
     }
     #changePasswordForm input{
         border-radius: 0;
