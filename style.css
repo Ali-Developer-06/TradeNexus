@@ -1039,18 +1039,24 @@ form input[type="submit"]{
 .RewardSection{
     margin: 10px;
 }
-.RewardSectionInner p{
+.RewardSection p{
     padding: 10px;
     font-weight: 500;
     border-radius: 4px;
     background-color: var(--secondary-color);
 }
+.RewardSectionInner{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 50px;
+    flex-wrap: wrap;
+}
+.RewardSectionInnerImg img{
+    width: 600px;
+}
 .RewardSectionInnerData{
     padding: 10px;
-    position: absolute;
-    top: 50%; left: 50%;
-    transform: translate(-50%, -50%);
-    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
 .RewardSectionInnerData button{
     width: 170px;
@@ -1238,5 +1244,8 @@ form input[type="submit"]{
     .resgetrationForm{
         width: 325px;
         margin-left: 15px;
+    }
+    .RewardSectionInnerImg img{
+        width: 300px;
     }
 }
